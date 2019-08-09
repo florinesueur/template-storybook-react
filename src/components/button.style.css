@@ -1,0 +1,10 @@
+:root {
+	--orange: orange;
+}
+
+.green {
+	color: color-mod(green a(50%));
+	p {
+		color: var(--orange);
+	}
+}
