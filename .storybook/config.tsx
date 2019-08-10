@@ -4,7 +4,7 @@ import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs } from '@storybook/addon-knobs';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withInfo } from '@storybook/addon-info';
-import { jsxDecorator } from 'storybook-addon-jsx';
+// import { jsxDecorator } from 'storybook-addon-jsx';
 
 import '../src/assets/main.css';
 
@@ -27,7 +27,7 @@ const newViewports = {
 
 addDecorator(withA11y);
 addDecorator(withKnobs);
-addDecorator(jsxDecorator);
+// addDecorator(jsxDecorator);
 addDecorator(
 	withInfo({
 		inline: false,

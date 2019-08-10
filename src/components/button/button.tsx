@@ -9,11 +9,15 @@ interface Props {
 }
 
 export const ButtonNew = ({ text }: Props) => {
+	const [value, setValue] = React.useState('...');
+
+	console.log(value);
+
 	return (
 		<div>
 			<div className="green">
-				<p>fsfvrgr</p>
 				{text}
+				<input type="text" value={value} onChange={({ target }) => setValue(target.value)} />
 			</div>
 		</div>
 	);
