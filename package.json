@@ -1,69 +1,67 @@
 {
-	"name": "my-app",
-	"version": "0.1.0",
-	"private": true,
-	"dependencies": {
-		"postcss-nested": "^4.1.2",
-		"prop-types": "^15.7.2",
-		"react": "^16.8.6",
-		"react-dom": "^16.8.6",
-		"react-scripts": "3.0.1",
-		"storybook-addon-jsx": "^7.1.5",
-		"styled-jsx": "^3.2.1"
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject",
-		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook",
-		"test:generate-output": "jest --json --outputFile=jest-test-results.json"
-	},
-	"eslintConfig": {
-		"extends": "react-app"
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	},
-	"devDependencies": {
-		"@babel/core": "^7.5.5",
-		"@storybook/addon-a11y": "^5.1.10",
-		"@storybook/addon-actions": "^5.1.10",
-		"@storybook/addon-backgrounds": "^5.1.10",
-		"@storybook/addon-console": "^1.2.1",
-		"@storybook/addon-info": "^5.1.10",
-		"@storybook/addon-knobs": "^5.1.10",
-		"@storybook/addon-links": "^5.1.10",
-		"@storybook/addon-notes": "^5.1.10",
-		"@storybook/addon-storysource": "^5.1.10",
-		"@storybook/addon-viewport": "^5.1.10",
-		"@storybook/addons": "^5.1.10",
-		"@storybook/react": "^5.1.10",
-		"babel-loader": "^8.0.6",
-		"eslint": "^6.1.0",
-		"eslint-config-airbnb": "^17.1.1",
-		"eslint-config-prettier": "^6.0.0",
-		"eslint-loader": "^2.2.1",
-		"eslint-plugin-compat": "^3.3.0",
-		"eslint-plugin-import": "^2.18.2",
-		"eslint-plugin-jsx-a11y": "^6.2.3",
-		"eslint-plugin-prettier": "^3.1.0",
-		"eslint-plugin-react": "^7.14.3",
-		"postcss-import": "^12.0.1",
-		"postcss-loader": "^3.0.0",
-		"postcss-preset-env": "^6.7.0",
-		"prettier": "^1.18.2",
-		"stylelint": "^10.1.0",
-		"stylelint-no-unsupported-browser-features": "^3.0.2"
-	}
+  "name": "theme-storybook-react",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@storybook/addon-centered": "^5.1.10",
+    "@types/node": "^12.7.1",
+    "@types/react": "^16.9.1",
+    "@types/react-dom": "^16.8.5",
+    "@types/storybook__addon-centered": "^3.4.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@storybook/addon-a11y": "^5.1.10",
+    "@storybook/addon-actions": "^5.1.10",
+    "@storybook/addon-backgrounds": "^5.1.10",
+    "@storybook/addon-console": "^1.2.1",
+    "@storybook/addon-info": "^5.1.10",
+    "@storybook/addon-knobs": "^5.1.10",
+    "@storybook/addon-links": "^5.1.10",
+    "@storybook/addon-storysource": "^5.1.10",
+    "@storybook/addon-viewport": "^5.1.10",
+    "@storybook/addons": "^5.1.10",
+    "@storybook/react": "^5.1.10",
+    "@types/storybook-addon-jsx": "^5.4.3",
+    "@types/storybook__addon-actions": "^3.4.3",
+    "@types/storybook__addon-info": "^4.1.2",
+    "@types/storybook__addon-knobs": "^5.0.3",
+    "@types/storybook__addon-links": "^3.3.5",
+    "@types/storybook__addon-viewport": "^4.1.1",
+    "@types/storybook__react": "^4.0.2",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "prettier": "^1.18.2",
+    "react-docgen-typescript-loader": "^3.1.1",
+    "react-docgen-typescript-webpack-plugin": "^1.1.0",
+    "storybook-addon-jsx": "^7.1.5",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-no-unsupported-browser-features": "^3.0.2",
+    "tslint": "^5.18.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-immutable": "^6.0.1",
+    "tslint-react": "^4.0.0",
+    "tslint-react-hooks": "^2.2.1",
+    "typescript": "^3.5.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

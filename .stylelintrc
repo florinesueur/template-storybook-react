@@ -1,4 +1,5 @@
 {
+  "extends": "stylelint-config-recommended",
   "plugins": [
     "stylelint-no-unsupported-browser-features"
   ],
@@ -7,6 +8,12 @@
       "browsers": ["> 1%", "Last 2 versions","Firefox ESR","not dead"],
       "ignore": [],
       "severity": "warning"
-    }]
+    }],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global"]
+      }
+    ]
   }
 }

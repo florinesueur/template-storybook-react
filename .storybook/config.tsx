@@ -1,11 +1,12 @@
 import { addDecorator, configure, addParameters } from '@storybook/react';
 import '@storybook/addon-console';
 import { withA11y } from '@storybook/addon-a11y';
-import { withInfo } from '@storybook/addon-info';
-
+import { withKnobs } from '@storybook/addon-knobs';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import { withInfo } from '@storybook/addon-info';
+import { jsxDecorator } from 'storybook-addon-jsx';
 
-import '../src/assets/styles/main.css';
+import '../src/assets/main.css';
 
 const newViewports = {
 	kindleFire2: {
@@ -25,6 +26,8 @@ const newViewports = {
 };
 
 addDecorator(withA11y);
+addDecorator(withKnobs);
+addDecorator(jsxDecorator);
 addDecorator(
 	withInfo({
 		inline: false,
@@ -32,9 +35,10 @@ addDecorator(
 );
 
 // automatically import all files ending in *.stories.js
-const req = require.context('../stories', true, /\.stories\.js$/);
+const req = require.context('../stories', true, /.stories.tsx$/);
+
 function loadStories() {
-	req.keys().forEach(filename => req(filename));
+	req.keys().forEach(req);
 }
 
 addParameters({
@@ -44,6 +48,11 @@ addParameters({
 			...newViewports,
 		},
 	},
+	backgrounds: [
+		{ name: 'light', value: '#fff' },
+		{ name: 'grey', value: '#EFEFEF', default: true },
+		{ name: 'dark', value: '#000000' },
+	],
 });
 
 configure(loadStories, module);

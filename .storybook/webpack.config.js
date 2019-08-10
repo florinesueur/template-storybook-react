@@ -1,31 +1,12 @@
-const path = require('path');
+const path = require("path");
 
-module.exports = {
-	module: {
-		rules: [
-			{
-				test: /\.css$/,
-				use: [
-					// Loader for webpack to process CSS with PostCSS
-					{
-						loader: 'postcss-loader',
-						options: {
-							/* 
-                Enable Source Maps
-               */
-							sourceMap: true,
-							/*
-                Set postcss.config.js config path && ctx 
-               */
-							config: {
-								path: './.storybook/',
-							},
-						},
-					},
-				],
+module.exports = ({ config }) => {
+  config.module.rules.push({
+    test: /\.(ts|tsx)$/,
+    loaders: ["awesome-typescript-loader", "react-docgen-typescript-loader"],
+    include: path.resolve(__dirname, "../")
+  });
 
-				include: path.resolve(__dirname, '../'),
-			},
-		],
-	},
+  config.resolve.extensions.push(".ts", ".tsx");
+  return config;
 };

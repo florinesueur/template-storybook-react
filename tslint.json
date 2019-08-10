@@ -1,0 +1,32 @@
+{
+	"extends": [
+		"tslint-config-airbnb",
+		"tslint-immutable",
+		"tslint-react",
+		"tslint-config-prettier",
+		"tslint-react-hooks"
+	],
+	"rules": {
+		"prettier/prettier": ["error"],
+		"function-name": [
+			true,
+			{
+				"method-regex": "^[a-z][\\w\\d]+$",
+				"private-method-regex": "^[a-z][\\w\\d]+$",
+				"protected-method-regex": "^[a-z][\\w\\d]+$",
+				"static-method-regex": "^[A-Z_\\d]+$",
+				"function-regex": "^[a-zA-Z][\\w\\d]+$"
+			}
+		],
+		"variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],
+		"jsx-boolean-value": false,
+		"curly": false,
+		"import-name": false,
+		"jsx-no-lambda": false
+	},
+	"env": {
+		"es6": true,
+		"node": true,
+		"browser": true
+	}
+}
