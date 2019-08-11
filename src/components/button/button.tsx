@@ -1,13 +1,16 @@
 import './button.style.css';
 import * as React from 'react';
 
-interface Props {
+export type Props = {
 	/**
 	 * Text for the button
 	 */
 	text: String;
-}
+};
 
+/**
+ * a super awesome post component made for success
+ */
 export const ButtonNew = ({ text }: Props) => {
 	const [value, setValue] = React.useState('...');
 
